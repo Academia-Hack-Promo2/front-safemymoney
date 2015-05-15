@@ -1,5 +1,5 @@
 $(function () {
-  var host = "http://localhost:3000/";
+  var host = "http://localhost:3000";
   
   ////////////////////////////////////
   // Everything to handle Transaction Type
@@ -12,10 +12,10 @@ $(function () {
   (function () {
     $.ajax({
       type: 'get',
-      url: host + 'categories',
+      url: host + '/categories',
       success: function (data) {
         for (var i = 0; i < data.length; i++ ) {
-          categories.prepend(
+          $(categories).after(
                 '<option value="' + data[i].id + '">'
                 + data[i].category_title + 
                 '</option>');
@@ -51,7 +51,7 @@ $(function () {
         var category = {"category_title": newCategory.val()};
         $.ajax({
           type: 'post',
-          url: host + 'categories',
+          url: host + '/categories',
           data: category,
 
           success: function(data) {
@@ -88,16 +88,16 @@ $(function () {
   
   $("#saveTransaction").click(function() {
     var transaction = {
-      "date": $('#finishDate').val(), // Date
-      "t_type": $('#tType').val(), // String
-      "category_id": categories.val(),
+      "date": $('#date').val(), // Date
+      "t_type": $('#t_type').val(), // String
+      "category_id": $('#category').val(),
       "amount": $('#amount').val(), // Float
-      "description": $('#description').val() // String
+      "description": $('#description').text() // String
     }; // Close Transaction VAR
     console.log(transaction);
     $.ajax({
       type: 'post',
-      url: host + 'transactions',
+      url: host + '/transactions',
       data: transaction,
       success: function(data) {
         console.log(data);

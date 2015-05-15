@@ -63,15 +63,15 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
-                            <select id="tType" class="form-control">
+                            <select id="t_type" class="form-control" id="t_type">
                                 <option value="default">Tipo de Transaccion</option>
                                 <option value="ingreso">Ingreso</option>
                                 <option Value="egreso">Egreso</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <select class="form-control" id="categories">
-                                <option value="default">Seleccione categoria</option>
+                            <select class="form-control" id="category">
+                                <option value="default" id="categories">Seleccione categoria</option>
                                 <option value="Nueva">Nueva</option>
                             </select>
                         </div>
@@ -80,7 +80,7 @@
                         <br>
                         <div class="form-group">
                             <div class='input-group date' id='datetimepicker1'>
-                                <input type='text' class="form-control" id="finishDate" placeholder="Fecha"/>
+                                <input type='text' class="form-control" id="date" placeholder="Fecha"/>
                                 <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-calendar"></span>
                                 </span>

@@ -11,6 +11,7 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -62,48 +63,40 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
-                            <label>
-                                Seleccione el tipo de transaccion
-                            </label>
-                            <select class="form-control">
-                                <option>Click aqui</option>
-                                <option>Ingreso</option>
-                                <option>Egreso</option>
+                            <select id="tType" class="form-control">
+                                <option value="default">Tipo de Transaccion</option>
+                                <option value="ingreso">Ingreso</option>
+                                <option Value="egreso">Egreso</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputCategory">
-                                Categoria
-                            </label>
-                            <select class="form-control">
-                                <option>Seleccione categoria</option>
-                                <option>Nueva</option>
+                            <select class="form-control" id="categories">
+                                <option value="default">Seleccione categoria</option>
+                                <option value="Nueva">Nueva</option>
                             </select>
                         </div>
-                        <input type="title" class="form-control" placeholder="Nueva Categoria">
+                        <input type="title" id="newCategory" class="form-control" placeholder="Nueva Categoria">
+                        <h4 id="error_category"><h4>
                         <br>
                         <div class="form-group">
-                            <label for="exampleInputDate">
-                                Fecha
-                            </label>
                             <div class='input-group date' id='datetimepicker1'>
-                                <input type='text' class="form-control" id="finish_date" />
+                                <input type='text' class="form-control" id="finishDate" placeholder="Fecha"/>
                                 <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>
-                                Description
-                            </label>
-                            <textarea class="form-control" rows="3"></textarea>
+                            <textarea id="description" class="form-control" rows="3" placeholder="Descripcion"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" id="amount" placeholder="Cantidad"/>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary"><i class="icon-nav glyphicon glyphicon-save"></i>Guardar Transaccion</button>
+                    <button type="button" class="btn btn-primary" id="saveTransaction"><i class="icon-nav glyphicon glyphicon-save"></i>Guardar Transaccion</button>
                 </div>
             </div>
         </div>
@@ -192,6 +185,9 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="bower_components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -227,6 +223,7 @@
     <!-- endbuild -->
     <!-- build:js({app,.tmp}) scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <script src="scripts/create.js"></script>
     <!-- endbuild -->
 </body>
 

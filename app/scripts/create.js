@@ -1,4 +1,4 @@
-$(function () {
+$(function(){
   var host = "http://localhost:3000";
   
   ////////////////////////////////////
@@ -7,7 +7,7 @@ $(function () {
   ////////////////////////////////////
   // Everything to handle newCategory
   var newCategory = $('#newCategory');
-  var categories = $('#categories');
+  var categories = $('#category');
   
   (function () {
     $.ajax({
@@ -15,7 +15,7 @@ $(function () {
       url: host + '/categories',
       success: function (data) {
         for (var i = 0; i < data.length; i++ ) {
-          $(categories).after(
+          $('#categories').after(
                 '<option value="' + data[i].id + '">'
                 + data[i].category_title + 
                 '</option>');
@@ -29,11 +29,11 @@ $(function () {
   
   newCategory.hide();
   categories.change(function() {
-      if ($(this).val() === 'Nueva') {
-          newCategory.show();
+  	if ($(this).val() == 'Nueva') {
+  		newCategory.show();
       } // Close If category is new
       else {
-          newCategory.hide();
+      	newCategory.hide();
       } // Close Else
   }); // Close funcion
   
@@ -112,8 +112,5 @@ $(function () {
         console.log(data);
       } // Close Error
     }); // Close AJAX
-
   }); // Close Save
-  
-  
-}); // Close Script
+}()); // Close Script

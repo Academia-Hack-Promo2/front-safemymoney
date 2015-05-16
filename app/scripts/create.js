@@ -76,6 +76,13 @@ $(function(){
   $('#datetimepicker1').datetimepicker({
           format:'YYYY-MM-DD'
     }); // Cierra DateTimePicker
+
+  $('#datetimepicker2').datetimepicker({
+            format:'YYYY-MM-DD'
+    }); // Cierra DateTimePicker
+  $('#datetimepicker3').datetimepicker({
+          format:'YYYY-MM-DD'
+  }); // Cierra DateTimePicker
   
   ////////////////////////////////////
   // Everything to handle amount

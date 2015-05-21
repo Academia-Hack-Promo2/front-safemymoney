@@ -49,11 +49,11 @@ nav ul li a:hover {
     width: 210px;
     border: 2px solid #6495ED;
 }
-<<<<<<< HEAD
 
 .label-info{
   margin-left: 5px;
-=======
+}
+
 .button-nav-t{
     width: 180px;
     margin-top: 0;
@@ -63,5 +63,4 @@ nav ul li a:hover {
 }
 #rango{
     margin-left: 60px;
->>>>>>> 31fba35d566cdc7f3ab8222085b89c013e922a58
 }

@@ -53,8 +53,6 @@ $(function() {
                     for (var j = 0; j < categories.transactions.length; j++) {
                         var transacciones = categories.transactions[j];
                         var pruebaId = $('#category-id-' + categories.id).attr('id');
-                        console.log(transacciones)
-                        console.log('category-id-' + categories.id)
 
                         if (transacciones.t_type == 1) {
                             var tipo_transaccion = 'Ingreso'

@@ -9,14 +9,13 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
-        <!-- build:css(.tmp) styles/main.css -->
-     <link rel="stylesheet" href="styles/main.css">
-      <!-- bower:css -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
     <!-- endbower -->
     <!-- endbuild -->
-
     <!-- endbuild -->
 </head>
 
@@ -39,6 +38,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="transaccion.html"><i class="icon-nav glyphicon glyphicon-transfer"></i><strong>Transacciones</strong></a></li>
                     <li><a href="#"><i class="icon-nav glyphicon glyphicon-list"></i><strong>Category List</strong></a></li>
                     <li><a href="#"><i class="icon-nav glyphicon glyphicon-search"></i><strong>Report</strong></a></li>
                     <li>
@@ -100,78 +100,20 @@
         </div>
     </div>
 
-    <div id="prueba"></div>
-
-    <section id="categories" class="container">
-    		<div class="row">
-    			<div class="col-md-12 text-center">
-    				<h1>Categorias</h1>
-    				<hr class="info-h1"> 
-    				<h4>Aqui podras ver todas tus categorias, con sus respectivas transacciones.</h4><br>
+        <div id="categories">
+                <section class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1>Categorias</h1>
+                    <hr class="info-h1"> 
+                    <h4>Aqui podras ver todas tus categorias, con sus respectivas transacciones.</h4>
+                        <br>
                 </div>
                 <div id="dom" class="row">
-                    <div class="col-md-6">
-                        <div id="menu">
-                            <div class="panel list-group">
-                                <h4 class="list-group-item">Salida al cine <span class="label label-info">5</span> <span class="glyphicon glyphicon-envelope pull-right"></span></h4>
-                                <a href="#" class="list-group-item" data-toggle="collapse" data-target="#sl" data-parent="#menu">Transacciones <span class="glyphicon glyphicon-tag pull-right"></span></a>
-
-                                <div id="sl" class="sublinks collapse">
-                                    <a data-target="#dl" data-toggle="collapse" class="list-group-item small">
-                                    <span class="glyphicon glyphicon-chevron-right"></span> Ingreso</a>
-                                    <div id="dl" class="sublinks collapse">
-                                        <div class="well">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem magni deserunt dolorum iste, fugiat, adipisci delectus explicabo aliquam deleniti repellendus nulla. Excepturi error quod architecto voluptatibus. A, error! Inventore, possimus.</p>
-                                        </div>
-                                    </div>
-                                    <a data-target="#dl2" data-toggle="collapse" class="list-group-item small"><span class="glyphicon glyphicon-chevron-right"></span> Egreso</a>
-                                    <div id="dl2" class="sublinks collapse">
-                                        <div class="well">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem magni deserunt dolorum iste, fugiat, adipisci delectus explicabo aliquam deleniti repellendus nulla. Excepturi error quod architecto voluptatibus. A, error! Inventore, possimus.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="#" data-toggle="collapse" data-target="#sl2" data-parent="#menu" class="list-group-item">Informacion relevante ...<span class="glyphicon glyphicon-stats pull-right"></span></a>
-                                <div id="sl2" class="sublinks collapse">
-                                    <div class="well">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem magni deserunt dolorum iste, fugiat, adipisci delectus explicabo aliquam deleniti repellendus nulla. Excepturi error quod architecto voluptatibus. A, error! Inventore, possimus.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div id="menu2">
-                            <div class="panel list-group">
-                                <h4 class="list-group-item">Salida al cine <span class="label label-info">5</span> <span class="glyphicon glyphicon-envelope pull-right"></span></h4>
-                                <a href="#" class="list-group-item" data-toggle="collapse" data-target="#el" data-parent="#menu">Transacciones <span class="glyphicon glyphicon-tag pull-right"></span></a>
-
-                                <div id="el" class="sublinks collapse">
-                                    <a data-target="#zl" data-toggle="collapse" class="list-group-item small"><span class="glyphicon glyphicon-chevron-right"></span> Ingreso</a>
-                                    <div id="zl" class="sublinks collapse">
-                                        <div class="well">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem magni deserunt dolorum iste, fugiat, adipisci delectus explicabo aliquam deleniti repellendus nulla. Excepturi error quod architecto voluptatibus. A, error! Inventore, possimus.</p>
-                                        </div>
-                                    </div>
-                                    <a data-target="#zl2" data-toggle="collapse" class="list-group-item small"><span class="glyphicon glyphicon-chevron-right"></span> Egreso</a>
-                                    <div id="zl2" class="sublinks collapse">
-                                        <div class="well">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem magni deserunt dolorum iste, fugiat, adipisci delectus explicabo aliquam deleniti repellendus nulla. Excepturi error quod architecto voluptatibus. A, error! Inventore, possimus.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="#" data-toggle="collapse" data-target="#xl2" data-parent="#menu2" class="list-group-item">Informacion relevante ...<span class="glyphicon glyphicon-stats pull-right"></span></a>
-                                <div id="xl2" class="sublinks collapse">
-                                    <div class="well">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem magni deserunt dolorum iste, fugiat, adipisci delectus explicabo aliquam deleniti repellendus nulla. Excepturi error quod architecto voluptatibus. A, error! Inventore, possimus.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
                 </div>
             </div>
-            </section>
+     </section>
+        </div>
             <!-- build:js(.) scripts/vendor.js -->
             <!-- bower:js -->
             <script src="bower_components/jquery/dist/jquery.js"></script>

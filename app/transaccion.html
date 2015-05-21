@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Saving my money</title>
+    <title>. : transaccion : .</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico">
@@ -41,10 +41,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="category_list.html"><i class="icon-nav glyphicon glyphicon-list"></i><strong>Category List</strong></a></li>
                     <li><a href="transaccion.html"><i class="icon-nav glyphicon glyphicon-transfer"></i><strong>Transacciones</strong></a></li>
                     <li><a href="#"><i class="icon-nav glyphicon glyphicon-list"></i><strong>Category List</strong></a></li>
-
                     <li><a href="#"><i class="icon-nav glyphicon glyphicon-search"></i><strong>Report</strong></a></li>
                     <li>
                         <button data-toggle="modal" data-target="#myModal" type="button" class=" button-nav"><i class="icon-nav glyphicon glyphicon-usd"></i><strong>Nueva Transaccion</strong></button>
@@ -66,15 +64,15 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
-                            <select id="t_type" class="form-control" id="t_type">
+                            <select id="tType" class="form-control">
                                 <option value="default">Tipo de Transaccion</option>
                                 <option value="ingreso">Ingreso</option>
                                 <option Value="egreso">Egreso</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <select class="form-control" id="category">
-                                <option value="default" id="categories">Seleccione categoria</option>
+                            <select class="form-control" id="categories">
+                                <option value="default">Seleccione categoria</option>
                                 <option value="Nueva">Nueva</option>
                             </select>
                         </div>
@@ -83,7 +81,7 @@
                         <br>
                         <div class="form-group">
                             <div class='input-group date' id='datetimepicker1'>
-                                <input type='text' class="form-control" id="date" placeholder="Fecha"/>
+                                <input type='text' class="form-control" id="finishDate" placeholder="Fecha"/>
                                 <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
@@ -103,86 +101,71 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> 
+   <!--  Fin del Modal -->
     <section id="info">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
                     <br>
-                    <h1>Bienvenidos</h1>
+                    <h1>Transacciones</h1>
                     <hr class="info-h1">
                     <br>
                 </div>
             </div>
-            <div class="row col-md-offset-2">
-                <div class="col-md-6">
-                    <h3>Ingresos Total del Mes:</h3></div><br>
-                <div class="col-md-6">
-                    <form class="form-inline">
-                        <div class="form-group">
-                            <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
-                            <div class="input-group">
-                                <div class="input-group-addon">$</div>
-                                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount" readonly>
-                                <div class="input-group-addon">.00</div>
-                            </div>
-                        </div>
-                    </form>
+
+            <div class="row">
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input class=" button-nav button-nav-t" type="button" value="Todas" id="botonTodas">
+                  </div>
+                  <div class="col-md-6">
+                    <input class=" button-nav button-nav-t" type="button" value="Mes Actual">
+                  </div>
                 </div>
-            </div><br>
-            <div class="row col-md-offset-2">
-                <div class="col-md-6"><br>
-                    <h3>Egresos Total del Mes:</h3></div><br><br>
-                <div class="col-md-6">
-                    <form class="form-inline">
-                        <div class="form-group">
-                            <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
-                            <div class="input-group">
-                                <div class="input-group-addon">$</div>
-                                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount" readonly>
-                                <div class="input-group-addon">.00</div>
-                            </div>
-                        </div>
-                    </form>
+              </div>
+              <div class="col-md-8">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input id="rango" class=" button-nav button-nav-t" type="button" value="Rango">
+                  </div>
+                  <div class="col-md-4 top-f">
+                    <div class="form-group">
+                      <div class='input-group date' id='datetimepicker2'>
+                        <input type='text' class="form-control form-group-t" id="finishDate" placeholder="Fecha"/>
+                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 top-f">
+                    <div class="form-group">
+                      <div class='input-group date' id='datetimepicker3'>
+                        <input type='text' class="form-control form-group-t" id="finishDate" placeholder="Fecha"/>
+                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-            <br>
+              </div>
+            </div>          
             <div class="col-md-12">
-                <h2 class="text-center">Ultimas Transacciones</h2>
-                <br>
-                <table class="table table-bordered text-center">
+                <h2 class="text-center" id="titulo"></h2>
+                <br>                
+                  <table class="table table-bordered text-center" id="allTransaction">
                     <tr class="info">
                         <th class="text-center">Fecha</th>
                         <th class="text-center">Monto</th>
                         <th class="text-center">Categoria</th>
                         <th class="text-center">Descripcion</th>
-                    </tr>
-                    <tr>
-                        <td>01-03-2015</td>
-                        <td>1233$</td>
-                        <td>Cine</td>
-                        <td>Pequeña compra con la familia</td>
-                    </tr>
-                    <tr>
-                        <td>03-03-2015</td>
-                        <td>2313$</td>
-                        <td>Deporte</td>
-                        <td>Pequeña compra con la familia</td>
-                    </tr>
-                    <tr>
-                        <td>10-06-2015</td>
-                        <td>2343$</td>
-                        <td>Comida china</td>
-                        <td>Pequeña compra con la familia</td>
-                    </tr>
-                    <tr>
-                        <td>13-09-2015</td>
-                        <td>234243$</td>
-                        <td>Hack</td>
-                        <td>Pequeña compra con la familia</td>
-                    </tr>
-                </table>
-            </div>
+                    </tr>                   
+                </table>   
+              </div>
+          </div>
         </div>
     </section>
     <!-- build:js(.) scripts/vendor.js -->
@@ -225,9 +208,22 @@
     <script src="bower_components/bootstrap/js/tab.js"></script>
     <!-- endbuild -->
     <!-- build:js({app,.tmp}) scripts/main.js -->
-    <script src="scripts/main.js"></script>
+    <script src="scripts/transaction.js"></script>
     <script src="scripts/create.js"></script>
     <!-- endbuild -->
 </body>
 
 </html>
+
+
+<!-- 
+
+                  </div>
+                  <div class="col-md-4">
+                    
+                  </div>
+                </div>
+              </div>
+
+
+            </div> -->

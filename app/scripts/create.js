@@ -92,9 +92,8 @@ $(function () {
       "t_type": $('#t_type').val(), // String
       "category_id": $('#category').val(),
       "amount": $('#amount').val(), // Float
-      "description": $('#description').text() // String
+      "description": $('#description').val() // String
     }; // Close Transaction VAR
-    console.log(transaction);
     $.ajax({
       type: 'post',
       url: host + '/transactions',
